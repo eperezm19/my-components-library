@@ -3,15 +3,15 @@
   "private": false,
   "version": "0.0.1",
   "type": "module",
-  "main": "./dist/my-components-library.es.js",
-  "module": "./dist/my-components-library.es.js",
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "files": [
     "dist"
   ],
   "exports": {
     ".": {
-      "import": "./dist/my-components-library.es.js",
+      "import": "./dist/index.js",
       "types": "./dist/index.d.ts"
     },
     "./styles.css": "./dist/my-components-library.css"

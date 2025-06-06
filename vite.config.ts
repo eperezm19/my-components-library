@@ -17,11 +17,10 @@ export default defineConfig({
     rollupOptions: {
       external: ["react", "react-dom", "tailwindcss"],
       output: {
-        globals: {
-          react: "React",
-          "react-dom": "ReactDOM",
-          tailwindcss: "tailwindcss",
-        },
+        format: "es",
+        exports: "named",
+        entryFileNames: "[name].js",
+        chunkFileNames: "[name].js",
         assetFileNames: (assetInfo) => {
           return assetInfo.name === "style.css"
             ? "my-components-library.css"
