@@ -1,0 +1,47 @@
+@import "tailwindcss";
+
+@theme inline {
+  --color-primary: var(--color-primary);
+  --color-secondary: var(--color-secondary);
+  --color-gshop: var(--color-gshop);
+  --color-destructive: var(--color-destructive);
+  --color-online: var(--color-online);
+}
+
+:root {
+  /* Base colors */
+  --color-primary: #000000;
+  --color-secondary: #ffffff;
+  
+  /* Button variants */
+  --color-gshop: #22c55e;
+  --color-destructive: #ef4444;
+  --color-online: #10b981;
+  
+  /* Button text colors */
+  --color-primary-text: #ffffff;
+  --color-secondary-text: #000000;
+  --color-gshop-text: #ffffff;
+  --color-destructive-text: #ffffff;
+  --color-online-text: #ffffff;
+  
+  /* Border radius */
+  --radius: 0.5rem;
+}
+
+.dark {
+  --color-primary: #ffffff;
+  --color-secondary: #000000;
+  
+  /* Button variants dark mode */
+  --color-gshop: #16a34a;
+  --color-destructive: #dc2626;
+  --color-online: #059669;
+  
+  /* Button text colors dark mode */
+  --color-primary-text: #000000;
+  --color-secondary-text: #ffffff;
+  --color-gshop-text: #ffffff;
+  --color-destructive-text: #ffffff;
+  --color-online-text: #ffffff;
+}
