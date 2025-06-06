@@ -1,22 +1,39 @@
 {
   "name": "my-components-library",
-  "private": true,
-  "version": "0.0.0",
+  "private": false,
+  "version": "0.0.1",
   "type": "module",
+  "main": "./dist/my-components-library.es.js",
+  "module": "./dist/my-components-library.es.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "exports": {
+    ".": {
+      "import": "./dist/my-components-library.es.js",
+      "types": "./dist/index.d.ts"
+    },
+    "./styles.css": "./dist/my-components-library.css"
+  },
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "prepublishOnly": "npm run build"
+  },
+  "peerDependencies": {
+    "react": "^18.0.0 || ^19.0.0",
+    "react-dom": "^18.0.0 || ^19.0.0"
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.1.8",
-    "react": "^19.1.0",
-    "react-dom": "^19.1.0",
     "tailwindcss": "^4.1.8"
   },
   "devDependencies": {
     "@eslint/js": "^9.25.0",
+    "@types/node": "^20.0.0",
     "@types/react": "^19.1.2",
     "@types/react-dom": "^19.1.2",
     "@vitejs/plugin-react-swc": "^3.9.0",
